@@ -20,23 +20,7 @@ import { AppNavigator, useNavigationPersistence } from "./navigators"
 import { ErrorBoundary } from "./screens/ErrorScreen/ErrorBoundary"
 import * as storage from "./utils/storage"
 import { customFontsToLoad } from "./theme"
-import { setupReactotron } from "./services/reactotron"
 import Config from "./config"
-
-// Set up Reactotron, which is a free desktop app for inspecting and debugging
-// React Native apps. Learn more here: https://github.com/infinitered/reactotron
-setupReactotron({
-  // clear the Reactotron window when the app loads/reloads
-  clearOnLoad: true,
-  // generally going to be localhost
-  host: "localhost",
-  // Reactotron can monitor AsyncStorage for you
-  useAsyncStorage: true,
-  // log the initial restored state from AsyncStorage
-  logInitialState: true,
-  // log out any snapshots as they happen (this is useful for debugging but slow)
-  logSnapshots: false,
-})
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
 
