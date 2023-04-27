@@ -4,12 +4,16 @@ import App from "./app/app.tsx"
 import React from "react"
 import { registerRootComponent } from "expo"
 import { Platform } from "react-native"
-import * as SplashScreen from "expo-splash-screen"
-
-SplashScreen.preventAutoHideAsync()
+import RNBootSplash from "react-native-bootsplash"
 
 function IgniteApp() {
-  return <App hideSplashScreen={SplashScreen.hideAsync} />
+  return (
+    <App
+      hideSplashScreen={async () => {
+        await RNBootSplash.hide({ fade: true, duration: 500 })
+      }}
+    />
+  )
 }
 
 if (Platform.OS !== "web") {
