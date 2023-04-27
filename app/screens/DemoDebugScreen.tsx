@@ -1,5 +1,4 @@
 import React, { FC } from "react"
-import * as Application from "expo-application"
 import { Linking, Platform, TextStyle, View, ViewStyle } from "react-native"
 import { Button, ListItem, Screen, Text } from "../components"
 import { DemoTabScreenProps } from "../navigators/DemoNavigator"
@@ -40,7 +39,7 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
           LeftComponent={
             <View style={$item}>
               <Text preset="bold">App Id</Text>
-              <Text>{Application.applicationId}</Text>
+              <Text>n/a</Text>
             </View>
           }
         />
@@ -48,7 +47,7 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
           LeftComponent={
             <View style={$item}>
               <Text preset="bold">App Name</Text>
-              <Text>{Application.applicationName}</Text>
+              <Text>n/a</Text>
             </View>
           }
         />
@@ -56,7 +55,7 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
           LeftComponent={
             <View style={$item}>
               <Text preset="bold">App Version</Text>
-              <Text>{Application.nativeApplicationVersion}</Text>
+              <Text>n/a</Text>
             </View>
           }
         />
@@ -64,7 +63,7 @@ export const DemoDebugScreen: FC<DemoTabScreenProps<"DemoDebug">> = function Dem
           LeftComponent={
             <View style={$item}>
               <Text preset="bold">App Build Version</Text>
-              <Text>{Application.nativeBuildVersion}</Text>
+              <Text>n/a</Text>
             </View>
           }
         />
